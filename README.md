@@ -1,5 +1,5 @@
 # openshift_okd-install
-record the installation of openshift(okd).
+record the installation of openshift(okd).<br>
 environment: kvm(libvirt-qemu)
 
 
