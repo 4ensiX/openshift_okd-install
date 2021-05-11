@@ -1,0 +1,11 @@
+virt-install \
+--name okd-control1 \
+--vcpus 4 \
+--memory 8192 \
+--os-variant=fedora29 \
+--import \
+--disk path=/var/lib/libvirt/images/okd-control1-v1.qcow2,size=60,backing_store=/var/lib/libvirt/base-image/fcos.qcow2  \
+--nographics \
+--noautoconsole \
+--network network=okd-net,mac=XX:XX:XX:XX:XX:XX \
+--qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=/var/lib/libvirt/ignition/master.ign"

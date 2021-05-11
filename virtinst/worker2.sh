@@ -1,0 +1,11 @@
+virt-install \
+--name okd-compute2 \
+--vcpus 2 \
+--memory 4096 \
+--os-variant=fedora29 \
+--import \
+--disk path=/mnt/devsdb/libvirt/images/okd-compute2-v1.qcow2,size=60,backing_store=/var/lib/libvirt/base-image/fcos.qcow2  \
+--nographics \
+--noautoconsole \
+--network network=okd-net,mac=XX:XX:XX:XX:XX:XX \
+--qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=/var/lib/libvirt/ignition/worker.ign"

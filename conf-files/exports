@@ -1,0 +1,2 @@
+/mnt/data *(rw,sync,no_wdelay,root_squash,insecure,fsid=0)
+
