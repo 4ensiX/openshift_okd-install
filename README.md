@@ -6,7 +6,7 @@ environment: kvm(libvirt-qemu)
 ## example files
 - system configuration files -> conf-files
 - virsh shellscripts for creating cluster nodes-> virsh
-- install-config.yaml
+- install-config.yaml<br>
 okd install config 
-- okd-net.xml
+- okd-net.xml<br>
 libvirt network config
