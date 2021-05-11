@@ -31,7 +31,7 @@ auth_tcp = "none"
 tcp_port = "16509"
 ```
 
-## advance preparation
+## additional preparation
 In order for libvirt to access and create files.<br>
 example↓
 ```
