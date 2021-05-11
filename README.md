@@ -14,18 +14,22 @@ sudo sysctl -p /etc/sysctl.d/99-ipforward.conf
 ```
 <br>
 ``/etc/default/libvirtd``
+
 ```
 libvirtd_opts="--listen"
 ```
 
 <br>
+
 ``/etc/libvirt/libvirtd.conf``
+
 ```
 listen_tls = 0
 listen_tcp = 1
 auth_tcp = "none"
 tcp_port = "16509"
 ```
+
 ## advance preparation
 In order for libvirt to access and create files.<br>
 example↓
@@ -34,7 +38,9 @@ $ mkdir /var/lib/libvirt/ignition
 $ mkdir /var/lib/libvirt/base-image
 ```
 
-`/etc/apparmor.d/abstractions/libvirt-qemu`
+add 
+``/etc/apparmor.d/abstractions/libvirt-qemu``
+
 ```
   # ignitons and base-images access
   /var/lib/libvirt/ignition/* r,
